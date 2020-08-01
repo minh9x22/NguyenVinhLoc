@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+   
+    <div class="limiter" style="padding-top: 25px;">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" action="" method="POST" novalidate>
+                    {{ form.hidden_tag() }}
+					<span class="login100-form-title p-b-26">
+						Register
+					</span>
+					<span class="login100-form-title p-b-48">
+						<i class="zmdi zmdi-font"></i>
+                    </span>
+                    <br>
+                    <div class="wrap-input100 validate-input" >
+                        {{ form.inputFirstName.label(class="sr-only") }}
+                    {{ form.inputFirstName(class="form-control", placeholder="First Name") }}
+                    {% if form.inputFirstName.errors %}
+                        {% for error in form.inputFirstName.errors %}
+                        <div class="alert alert-danger">
+                            <strong>Error:</strong> [{{ error }}]
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+					</div>
+                    <div class="wrap-input100 validate-input" >
+                        {{ form.inputLastName.label(class="sr-only") }}
+                        {{ form.inputLastName(class="form-control", placeholder="Last Name") }}
+                        {% if form.inputLastName.errors %}
+                            {% for error in form.inputLastName.errors %}
+                            <div class="alert alert-danger">
+                                <strong>Error:</strong> [{{ error }}]
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+					</div>
+                    <div class="wrap-input100 validate-input" >
+                        {{ form.inputEmail.label(class="sr-only") }}
+                        {{ form.inputEmail(class="form-control", placeholder="Email Address") }}
+                        {% if form.inputEmail.errors %}
+                            {% for error in form.inputEmail.errors %}
+                            <div class="alert alert-danger">
+                                <strong>Error:</strong> [{{ error }}]
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+					</div>
+
+					<div class="wrap-input100 validate-input" >
+                        {{ form.inputPassword.label(class="sr-only") }}
+                        {{ form.inputPassword(class="form-control", placeholder="Password") }}
+                        {% if form.inputPassword.errors %}
+                            {% for error in form.inputPassword.errors %}
+                            <div class="alert alert-danger">
+                                <strong>Error:</strong> [{{ error }}]
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="wrap-input100 validate-input" >
+                        {{ form.inputConfirmPassword.label(class="sr-only") }}
+                        {{ form.inputConfirmPassword(class="form-control", placeholder="Confirm Password") }}
+                        {% if form.inputConfirmPassword.errors %}
+                            {% for error in form.inputConfirmPassword.errors %}
+                            <div class="alert alert-danger">
+                                <strong>Error:</strong> [{{ error }}]
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+					</div>
+
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button type="submit"class="login100-form-btn button-register">
+                                Sign Up
+							</button>
+						</div>
+					</div>
+
+					<div class="text-center p-t-115">
+						<span class="txt1">
+							Sign In
+						</span>
+
+						<!-- <a class="txt2 a1" href="#">
+                            {{ form.submit(class="btn btn-lg btn-success btn-block") }}
+						</a> -->
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+
+{% endblock %}

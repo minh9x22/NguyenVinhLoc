@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="container" style="padding-top: 100px;">
+        <div class="jumptron">
+            <p class="lead"></p>
+            <p><a class="btn btn-lg btn-success" href="/signUp">Sign up now</a></p>
+            
+        </div>            
+    
+        <div class="row marketing">
+            {% for todoitem in todolistvar %}
+            <div class="col-sm-4">
+                <h4>{{todoitem.name}}</h4>
+                <p>{{todoitem.desciption}}</p>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+
+{% endblock %}

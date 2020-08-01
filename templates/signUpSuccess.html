@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>{{ userpass.first_name + " " + userpass.last_name }}</h1>
+            <p>Your email: {{ userpass.email }}</p>
+            <p>Your password: {{ userpass.password_hash }}</p>
+        </div>
+    </div>
+
+{% endblock %}
